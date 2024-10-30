@@ -1,0 +1,211 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif,Arial, sans-serif;
+    background-color: antiquewhite;
+    color: ghostwhite;
+    transition: background-color 1s, color 1s;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header */
+header {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vw 5vw 2vw 5vw;
+    margin-bottom: 5vw;
+    background-color: antiquwhite;
+    transition: background-color 1s, color 1s;
+}
+
+.app-title {
+    font-size: 7vw;
+    color: black;
+    transition: background-color 1s, color 1s;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    background-color: floralwhite;
+    color: black;
+    border: 0.5vw solid black;
+    padding: 2vw 3vw;
+    
+    border-radius: 3vw;
+    cursor: pointer;
+    font-size: 4vw;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.theme-toggle:hover{
+  background-color: black;
+  color: floralwhite;
+  border: 0.5vw solid floralwhite;
+}
+
+/* App Container */
+.app-container {
+    width: 90vw;
+    max-width: 90vw;
+    text-align: center;
+}
+
+/* News Feed Container */
+.news-feed {
+    max-height: 77vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5vw;
+}
+
+/* Individual News Box */
+.news-box {
+    background-color: floralwhite;
+    padding: 5vw;
+    border-radius: 2.5vw;
+    box-shadow: 0vw 1vw 2vw rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 1s, color 1s;
+}
+
+.news-title-box {
+    font-size: 5vw;
+    font-weight: bold;
+    color: #1D1D1D;
+    margin-bottom: 2.5vw;
+    cursor: pointer;
+    transition: background-color 1s, color 1s;
+}
+
+.news-description {
+    font-size: 4vw;
+    color: #8A8A8A;
+    margin-bottom: 2.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 1s, color 1s;
+}
+
+.news-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 4vw;
+    transition: background-color 1s, color 1s;
+}
+
+.news-link:hover {
+    color: #0056b3;
+}
+
+/* Loading indicator style*/
+.loading-indicator {
+    display: none;
+    text-align: center;
+    margin: auto;
+}
+
+.loader {
+    border: 2vw solid ghostwhite;
+    border-top: 2vw solid black; 
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    animation: spin 1s linear infinite;
+    margin: 5vw auto; /* Centering the loader */
+}
+
+/* Load More News button style */
+.load-more-btn {
+    display: block;
+    width: 70%;
+    margin: 8vw auto;
+    padding: 2vw;
+    font-size: 5vw;
+    background-color: floralwhite;
+    color: black;
+    border: 0.5vw solid black;
+    border-radius: 3vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.load-more-btn:hover {
+    background-color: black;
+    color: floralwhite;
+    border: 0.5vw solid floralwhite;
+}
+
+/* Animation for loader */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #101010;
+    color: ghostwhite;
+}
+
+.dark-mode header {
+  background-color: black;
+}
+
+.dark-mode .app-title{
+  color: darkorange;
+}
+
+.dark-mode .theme-toggle{
+  background-color: black;
+  color: darkorange;
+  border: 0.5vw solid darkorange;
+}
+
+.dark-mode .theme-toggle:hover {
+    background-color: darkorange;
+    color: black;
+}
+
+.dark-mode .news-box {
+    background-color: #1D1D1D;
+}
+
+.dark-mode .news-title-box {
+    color: ghostwhite;
+}
+
+.dark-mode .news-link {
+    color: #ffa500;
+}
+
+.dark-mode .loader{
+  border: 2vw solid dimgray;
+  border-top: 2vw solid ghostwhite;
+}
+
+.dark-mode .load-more-btn{
+  background-color: black;
+  color: darkorange;
+  border: 0.5vw solid darkorange;
+}
+
+.news-image {
+    width: 100%;
+    max-height: 40vw;
+    object-fit: cover;
+    border-radius: 2vw;
+    margin-bottom: 2vw;
+}
